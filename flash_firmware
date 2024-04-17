@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+while getopts ":p:" flag; do
+    case $flag in
+    p)
+        PORT=$OPTARG
+    ;;
+    esac
+done
+
+if [ "$PORT" = "" ]; then
+    echo "-p flag is required"
+    exit 1
+fi
+
+esptool.py --port $PORT erase_flash &&
+
+esptool.py --chip esp32 --port $PORT write_flash -z 0x1000 ./firmware/ESP32*.bin

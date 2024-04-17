@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+while getopts ":p:" flag; do
+    case $flag in
+    p)
+        PORT=$OPTARG
+    ;;
+    *)
+        echo "-p flag is required"
+        exit 1
+    ;;
+    esac
+done
+
+if [ "$PORT" = "" ]; then
+
+    echo "-p flag is required"
+    exit 1
+
+fi
+
+ampy -p $PORT put *.py
