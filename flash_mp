@@ -5,10 +5,6 @@ while getopts ":p:" flag; do
     p)
         PORT=$OPTARG
     ;;
-    *)
-        echo "-p flag is required"
-        exit 1
-    ;;
     esac
 done
 
