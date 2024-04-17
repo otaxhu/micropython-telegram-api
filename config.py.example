@@ -3,3 +3,4 @@
 
 WIFI_SSID = "<Your Wifi SSID>"
 WIFI_PASSWORD = "<Your Wifi Password>"
+TELEGRAM_BASE_URL = "https://api.telegram.org/bot<HERE_GOES_YOUR_BOT_API_KEY>"
