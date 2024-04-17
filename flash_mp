@@ -15,4 +15,6 @@ if [ "$PORT" = "" ]; then
 
 fi
 
-ampy -p $PORT put *.py
+for file in *.py; do
+    ampy -p $PORT put $file
+done
