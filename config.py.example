@@ -1,0 +1,5 @@
+# Create a new file named config.py and copy the content to that file
+# This file was created to store private credentials.
+
+WIFI_SSID = "<Your Wifi SSID>"
+WIFI_PASSWORD = "<Your Wifi Password>"
